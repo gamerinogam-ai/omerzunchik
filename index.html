@@ -62,21 +62,6 @@
       filter: drop-shadow(0 0 20px rgba(178,134,11,0.6));
     }
 
-    .slogan {
-      font-size: 2.2rem;
-      font-weight: 900;
-      font-style: italic;
-      color: var(--neon-magenta);
-      text-shadow: 0 0 20px var(--neon-magenta), 0 0 40px var(--accent-red);
-      margin-top: 1rem;
-      animation: pulse 3s infinite ease-in-out;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.85; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-
     .tagline {
       font-size: 1.4rem;
       font-style: italic;
@@ -119,24 +104,35 @@
       text-shadow: 0 0 15px rgba(184,134,11,0.5);
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .gallery img {
+    .main-photo {
       width: 100%;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: transform 0.4s, filter 0.4s;
-      filter: brightness(0.7);
+      max-width: 1000px;
+      margin: 0 auto 3rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(194,24,91,0.4);
     }
 
-    .gallery img:hover {
-      transform: scale(1.06);
-      filter: brightness(1);
+    .main-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .slogan {
+      font-size: 2.8rem;
+      font-weight: 900;
+      font-style: italic;
+      color: var(--neon-magenta);
+      text-shadow: 0 0 20px var(--neon-magenta), 0 0 40px var(--accent-red);
+      text-align: center;
+      margin: 1.5rem 0 4rem;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.85; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
     }
 
     .rules {
@@ -151,6 +147,8 @@
       list-style: none;
       font-size: 1.3rem;
       line-height: 2;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .rules li strong {
@@ -168,7 +166,8 @@
     @media (max-width: 768px) {
       .hero { min-height: 90vh; }
       .logo-img { max-width: 300px; }
-      .slogan { font-size: 1.8rem; }
+      .slogan { font-size: 2rem; }
+      .main-photo { max-width: 100%; }
     }
   </style>
 </head>
@@ -177,7 +176,6 @@
   <section class="hero">
     <div class="logo-container">
       <img src="/logo.jpg" alt="Omerzunchik Logo" class="logo-img">
-      <div class="slogan">Why are you gay</div>
     </div>
 
     <p class="tagline">Private club for those who are not afraid of their desires<br>Invitation only • Full discretion • 21+</p>
@@ -186,15 +184,11 @@
   </section>
 
   <section>
-    <h2>Inside the Club</h2>
-    <div class="gallery">
-      <!-- Replace these with your real interior photos -->
-      <img src="https://images.unsplash.com/photo-1519125323398-675f398e6978?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Private zone interior">
-      <img src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Red light and leather">
-      <img src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Chains and mirrors">
-      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27b1d4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Velvet and neon">
-      <!-- Add your own photos here -->
+    <div class="main-photo">
+      <img src="/main1.jpg" alt="Omerzunchik Interior">
     </div>
+
+    <div class="slogan">Why are you gay</div>
   </section>
 
   <section class="rules">
