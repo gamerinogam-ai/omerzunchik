@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omerzunchik • Приватный клуб</title>
+  <meta name="description" content="Приватный клуб для тех, кто не боится своих желаний. Только по приглашению. 21+"/>
+  <style>
+    :root {
+      --bg-dark: #0a0005;
+      --bg-gradient: linear-gradient(to bottom, #2a000a, #0f0005);
+      --accent-red: #c2185b;
+      --neon-magenta: #ff1493;
+      --gold: #b8860b;
+      --text-light: #f5f0e1;
+      --text-muted: #d0c0b0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-light);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      min-height: 800px;
+      background: url('https://images.unsplash.com/photo-1519125323398-675f398e6978?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+      /* Замени на реальное фото интерьера: красный свет, St. Andrew's cross, цепи, velvet, кожаный bench */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(10,0,5,0.7), rgba(15,0,5,0.85));
+      z-index: 1;
+    }
+
+    .logo-container {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+    }
+
+    .logo-img {
+      max-width: 400px;
+      height: auto;
+      filter: drop-shadow(0 0 20px rgba(178,134,11,0.6));
+    }
+
+    .slogan {
+      font-size: 2.2rem;
+      font-weight: 900;
+      font-style: italic;
+      color: var(--neon-magenta);
+      text-shadow: 0 0 20px var(--neon-magenta), 0 0 40px var(--accent-red);
+      margin-top: 1rem;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.85; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin: 2rem 0 3rem;
+      max-width: 600px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--accent-red), #8b0000);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(194,24,91,0.6);
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 0 50px rgba(194,24,91,0.9);
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--gold);
+      text-shadow: 0 0 15px rgba(184,134,11,0.5);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.4s, filter 0.4s;
+      filter: brightness(0.7);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.06);
+      filter: brightness(1);
+    }
+
+    .rules {
+      background: rgba(0,0,0,0.6);
+      padding: 3rem;
+      border-radius: 12px;
+      border: 1px solid var(--accent-red);
+      text-align: center;
+    }
+
+    .rules ul {
+      list-style: none;
+      font-size: 1.3rem;
+      line-height: 2;
+    }
+
+    .rules li strong {
+      color: var(--neon-magenta);
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero { min-height: 90vh; }
+      .logo-img { max-width: 300px; }
+      .slogan { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="logo-container">
+      <!-- Здесь первый вариант логотипа (PNG/SVG) -->
+      <img src="logo-omerzunchik-first-variant.png" alt="Omerzunchik Logo" class="logo-img">
+      <div class="slogan">Why are you gay</div>
+    </div>
+
+    <p class="tagline">Приватный клуб для тех, кто не боится своих желаний<br>Только по приглашению • Полная дискреция • 21+</p>
+
+    <a href="https://t.me/omerzunchik_private" class="cta" target="_blank">ПОДАТЬ ЗАЯВКУ НА ЧЛЕНСТВО →</a>
+  </section>
+
+  <section>
+    <h2>Внутри клуба</h2>
+    <div class="gallery">
+      <!-- Замени на реальные фото интерьера: красный свет, BDSM-элементы -->
+      <img src="https://images.unsplash.com/photo-1519125323398-675f398e6978?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Интерьер приватной зоны">
+      <img src="https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Красный свет и кожа">
+      <img src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Цепи и зеркала">
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27b1d4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1200" alt="Velvet и неон">
+      <!-- Добавь 2–4 своих фото с крестом, bench, chains и т.д. -->
+    </div>
+  </section>
+
+  <section class="rules">
+    <h2>Правила</h2>
+    <ul>
+      <li><strong>21+</strong> строго</li>
+      <li><strong>Нет фото / видео / имён</strong></li>
+      <li><strong>Согласие — священно</strong></li>
+      <li><strong>Границы уважаются всегда</strong></li>
+      <li>Face & dress control</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Omerzunchik • Тбилиси • Только для членов</p>
+    <p>Telegram: @omerzunchik_private • invite@omerzunchik.ge</p>
+    <p>© 2026 • 21+</p>
+  </footer>
+
+  <script>
+    // Простая плавная прокрутка для CTA если нужно
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
