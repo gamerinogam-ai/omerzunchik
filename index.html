@@ -96,14 +96,6 @@
       margin: 0 auto;
     }
 
-    h2 {
-      font-size: 3rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--gold);
-      text-shadow: 0 0 15px rgba(184,134,11,0.5);
-    }
-
     .main-photo {
       width: 100%;
       max-width: 1000px;
@@ -135,26 +127,36 @@
       50% { opacity: 1; transform: scale(1.05); }
     }
 
+    /* ==================== RULES ==================== */
     .rules {
       background: rgba(0,0,0,0.6);
-      padding: 3rem;
+      padding: 4rem 2rem;
       border-radius: 12px;
       border: 1px solid var(--accent-red);
       text-align: center;
     }
 
+    .rules h2 {
+      font-size: 3.2rem;
+      color: var(--accent-red);
+      margin-bottom: 2.5rem;
+      text-shadow: 0 0 15px var(--accent-red);
+    }
+
     .rules ul {
       list-style: none;
-      font-size: 1.3rem;
-      line-height: 2;
       max-width: 700px;
       margin: 0 auto;
     }
 
-    .rules li strong {
-      color: var(--neon-magenta);
+    .rules li {
+      font-size: 1.45rem;
+      font-weight: 700;           /* Жирный текст */
+      color: var(--accent-red);   /* Красный цвет */
+      margin: 1.1rem 0;
+      text-shadow: 0 0 8px rgba(194,24,91,0.5);
     }
-
+    /* ==================== FOOTER ==================== */
     footer {
       background: #000;
       text-align: center;
@@ -168,6 +170,7 @@
       .logo-img { max-width: 300px; }
       .slogan { font-size: 2rem; }
       .main-photo { max-width: 100%; }
+      .rules h2 { font-size: 2.6rem; }
     }
   </style>
 </head>
@@ -177,9 +180,7 @@
     <div class="logo-container">
       <img src="/logo.jpg" alt="Omerzunchik Logo" class="logo-img">
     </div>
-
     <p class="tagline">Private club for those who are not afraid of their desires<br>Invitation only • Full discretion • 21+</p>
-
     <a href="https://t.me/omerzunchik_private" class="cta" target="_blank">APPLY FOR MEMBERSHIP →</a>
   </section>
 
@@ -187,17 +188,16 @@
     <div class="main-photo">
       <img src="/main1.jpg" alt="Omerzunchik Interior">
     </div>
-
     <div class="slogan">Why are you gay</div>
   </section>
 
   <section class="rules">
     <h2>Rules</h2>
     <ul>
-      <li><strong>21+ strictly</strong></li>
-      <li><strong>No photos / videos / names</strong></li>
-      <li><strong>Consent is sacred</strong></li>
-      <li><strong>Boundaries are always respected</strong></li>
+      <li>21+ strictly</li>
+      <li>No photos / videos / names</li>
+      <li>Consent is sacred</li>
+      <li>Boundaries are always respected</li>
       <li>Face & dress control</li>
     </ul>
   </section>
