@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Omerzunchik • Private Club</title>
   <meta name="description" content="Private club for those who are not afraid of their desires. Invitation only. 21+"/>
+  
+  <!-- Google Fonts для красивого handwritten стиля -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --bg-dark: #0a0005;
@@ -13,7 +17,6 @@
       --neon-magenta: #ff1493;
       --gold: #b8860b;
       --text-light: #f5f0e1;
-      --text-muted: #d0c0b0;
     }
 
     * {
@@ -29,7 +32,6 @@
       overflow-x: hidden;
     }
 
-    /* Hero — растянутая на весь экран */
     .hero {
       height: 100vh;
       min-height: 800px;
@@ -41,14 +43,13 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
-      width: 100%;
     }
 
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.9));
+      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.92));
       z-index: 1;
     }
 
@@ -64,17 +65,22 @@
       filter: drop-shadow(0 0 20px rgba(178,134,11,0.6));
     }
 
-    /* Обновлённая надпись — белый цвет + UPPERCASE */
+    /* Обновлённая надпись */
     .tagline {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #ffffff;                    /* Белый цвет */
-      text-transform: uppercase;         /* Прописные буквы */
-      text-shadow: 0 0 15px rgba(255,255,255,0.4);
-      margin: 2rem 0 3rem;
-      max-width: 700px;
-      line-height: 1.5;
-      letter-spacing: 1px;
+      font-family: 'Great Vibes', cursive;     /* Красивый handwritten стиль */
+      font-size: 2.1rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #ffffff;
+      text-shadow: 
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(194,24,91,0.6),
+        0 0 35px rgba(194,24,91,0.4);
+      margin: 2.2rem 0 3.5rem;
+      max-width: 720px;
+      line-height: 1.35;
+      letter-spacing: 1.5px;
+      z-index: 2;
     }
 
     .cta {
@@ -90,6 +96,7 @@
       transition: all 0.3s;
       text-decoration: none;
       display: inline-block;
+      z-index: 2;
     }
 
     .cta:hover {
@@ -167,7 +174,7 @@
       .logo-img { max-width: 300px; }
       .slogan { font-size: 2rem; }
       .main-photo { max-width: 100%; }
-      .tagline { font-size: 1.2rem; }
+      .tagline { font-size: 1.75rem; }
     }
   </style>
 </head>
