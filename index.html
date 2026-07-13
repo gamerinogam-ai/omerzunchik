@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Omerzunchik • Private Club</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-dark: #0a0005;
@@ -24,7 +24,6 @@
 
     .hero {
       height: 100vh;
-      min-height: 650px;
       background: url('/main.jpg') center/cover no-repeat;
       position: relative;
       display: flex;
@@ -32,50 +31,35 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
     }
 
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(10,0,5,0.8), rgba(15,0,5,0.95));
+      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.92));
     }
 
-    /* Название клуба */
-    .club-name {
+    .logo-container {
       position: absolute;
-      top: 25px;
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-shadow: 0 0 20px rgba(184,134,11,0.9);
-      letter-spacing: 3px;
+      top: 40px;
+      left: 40px;
       z-index: 3;
     }
 
-    /* Логотип */
-    .logo-container {
-      position: absolute;
-      top: 25px;
-      left: 20px;
-      z-index: 4;
-    }
-
     .logo-img {
-      max-width: 200px;
+      max-width: 280px;
       height: auto;
     }
 
-    /* Основная надпись */
     .tagline {
       font-family: 'Great Vibes', cursive;
-      font-size: 2.4rem;
+      font-size: 3.15rem;
       color: #ffffff;
-      text-shadow: 0 0 20px rgba(255,255,255,0.9), 0 0 35px rgba(194,24,91,0.8);
-      margin: 110px 0 3rem;
-      max-width: 90%;
+      text-shadow: 0 0 25px rgba(255,255,255,0.9), 0 0 45px rgba(194,24,91,0.8);
+      margin: 100px 0 3.5rem;
+      max-width: 780px;
       line-height: 1.25;
       z-index: 2;
     }
@@ -83,80 +67,68 @@
     .cta {
       background: linear-gradient(135deg, var(--accent-red), #8b0000);
       color: white;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       font-weight: bold;
-      padding: 1.1rem 3rem;
+      padding: 1.3rem 3.5rem;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 0 30px rgba(194,24,91,0.7);
+      box-shadow: 0 0 35px rgba(194,24,91,0.7);
+      transition: all 0.3s;
       z-index: 2;
+    }
+
+    .cta:hover {
+      transform: translateY(-5px) scale(1.05);
     }
 
     /* Правила и футер */
     .rules {
       background: rgba(0,0,0,0.75);
-      padding: 3.5rem 1.5rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
 
     .rules h2 {
-      font-size: 2.6rem;
+      font-size: 3rem;
       color: var(--accent-red);
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
     }
 
     .rules ul {
       list-style: none;
       max-width: 700px;
       margin: 0 auto;
-      font-size: 1.25rem;
-      line-height: 2.1;
+      font-size: 1.35rem;
+      line-height: 2.2;
+    }
+
+    .rules li strong {
+      color: var(--neon-magenta);
     }
 
     footer {
       background: #000;
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem;
       color: #aaa;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
-    /* ==================== MOBILE ==================== */
     @media (max-width: 768px) {
-      .club-name { 
-        font-size: 2.4rem; 
-        top: 18px; 
-      }
-      .logo-img { 
-        max-width: 170px; 
-      }
-      .tagline { 
-        font-size: 1.85rem; 
-        margin: 80px 0 2.5rem; 
-      }
-      .hero {
-        padding: 1rem;
-        min-height: 100vh;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .club-name { font-size: 2.1rem; }
-      .tagline { font-size: 1.65rem; }
+      .logo-img { max-width: 220px; }
+      .tagline { font-size: 2.4rem; margin: 70px 0 2.5rem; }
     }
   </style>
 </head>
 <body>
 
   <section class="hero">
-    <div class="club-name">OMERZUNCHIK</div>
-
     <div class="logo-container">
       <img src="/logo.jpg" alt="Omerzunchik Logo" class="logo-img">
     </div>
-    
+   
     <p class="tagline">Private club for those who are not afraid of their desires<br>Invitation only • Full discretion • 21+</p>
-    
+   
     <a href="apply.html" class="cta">APPLY FOR MEMBERSHIP →</a>
   </section>
 
