@@ -6,13 +6,11 @@
   <title>Omerzunchik • Private Club</title>
   <meta name="description" content="Private club for those who are not afraid of their desires. Invitation only. 21+"/>
   
-  <!-- Google Fonts для красивого handwritten стиля -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-dark: #0a0005;
-      --bg-gradient: linear-gradient(to bottom, #2a000a, #0f0005);
       --accent-red: #c2185b;
       --neon-magenta: #ff1493;
       --gold: #b8860b;
@@ -26,15 +24,16 @@
     }
 
     body {
-      background: var(--bg-gradient);
+      background: var(--bg-dark);
       color: var(--text-light);
       font-family: 'Segoe UI', system-ui, sans-serif;
-      overflow-x: hidden;
     }
 
+    /* HERO — ФОН РАСТЯНУТ НА ВЕСЬ ЭКРАН */
     .hero {
       height: 100vh;
       min-height: 800px;
+      width: 100vw;                    /* Полная ширина экрана */
       background: url('/main.jpg') center/cover no-repeat;
       position: relative;
       display: flex;
@@ -43,6 +42,9 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%);     /* Центрируем по ширине */
     }
 
     .hero::before {
@@ -65,21 +67,18 @@
       filter: drop-shadow(0 0 20px rgba(178,134,11,0.6));
     }
 
-    /* Обновлённая надпись */
     .tagline {
-      font-family: 'Great Vibes', cursive;     /* Красивый handwritten стиль */
+      font-family: 'Great Vibes', cursive;
       font-size: 2.1rem;
       font-weight: 400;
-      font-style: italic;
       color: #ffffff;
       text-shadow: 
-        0 0 10px rgba(255,255,255,0.8),
-        0 0 20px rgba(194,24,91,0.6),
-        0 0 35px rgba(194,24,91,0.4);
-      margin: 2.2rem 0 3.5rem;
+        0 0 15px rgba(255,255,255,0.9),
+        0 0 25px rgba(194,24,91,0.7),
+        0 0 40px rgba(194,24,91,0.4);
+      margin: 2rem 0 3.5rem;
       max-width: 720px;
       line-height: 1.35;
-      letter-spacing: 1.5px;
       z-index: 2;
     }
 
@@ -89,13 +88,10 @@
       font-size: 1.3rem;
       font-weight: bold;
       padding: 1rem 2.5rem;
-      border: none;
       border-radius: 50px;
-      cursor: pointer;
+      text-decoration: none;
       box-shadow: 0 0 30px rgba(194,24,91,0.6);
       transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
       z-index: 2;
     }
 
@@ -110,19 +106,13 @@
       margin: 0 auto;
     }
 
-    .main-photo {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto 3rem;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 40px rgba(194,24,91,0.4);
-    }
-
     .main-photo img {
       width: 100%;
+      max-width: 1000px;
       height: auto;
       display: block;
+      margin: 0 auto;
+      border-radius: 12px;
     }
 
     .slogan {
@@ -132,49 +122,27 @@
       color: var(--neon-magenta);
       text-shadow: 0 0 20px var(--neon-magenta), 0 0 40px var(--accent-red);
       text-align: center;
-      margin: 1.5rem 0 4rem;
-      animation: pulse 3s infinite ease-in-out;
+      margin: 2rem 0 4rem;
+      animation: pulse 3s infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 0.85; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-
-    .rules {
-      background: rgba(0,0,0,0.6);
-      padding: 3rem;
-      border-radius: 12px;
-      border: 1px solid var(--accent-red);
-      text-align: center;
-    }
-
-    .rules ul {
-      list-style: none;
-      font-size: 1.3rem;
-      line-height: 2;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .rules li strong {
-      color: var(--neon-magenta);
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; transform: scale(1.04); }
     }
 
     footer {
       background: #000;
       text-align: center;
       padding: 3rem 1rem;
+      color: #aaa;
       font-size: 0.95rem;
-      color: var(--text-muted);
     }
 
     @media (max-width: 768px) {
-      .hero { min-height: 90vh; }
+      .hero { height: 90vh; }
       .logo-img { max-width: 300px; }
-      .slogan { font-size: 2rem; }
-      .main-photo { max-width: 100%; }
-      .tagline { font-size: 1.75rem; }
+      .tagline { font-size: 1.7rem; }
     }
   </style>
 </head>
