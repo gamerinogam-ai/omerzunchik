@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Omerzunchik • Private Club</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-dark: #0a0005;
@@ -41,25 +41,11 @@
       background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.92));
     }
 
-    /* Название клуба в самом верху */
-    .club-name {
-      position: absolute;
-      top: 45px;
-      font-family: 'Playfair Display', serif;
-      font-size: 4.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-shadow: 0 0 20px rgba(184,134,11,0.9),
-                   0 0 40px rgba(194,24,91,0.5);
-      letter-spacing: 6px;
-      z-index: 3;
-    }
-
     .logo-container {
       position: absolute;
       top: 40px;
       left: 40px;
-      z-index: 4;
+      z-index: 3;
     }
 
     .logo-img {
@@ -72,7 +58,7 @@
       font-size: 3.15rem;
       color: #ffffff;
       text-shadow: 0 0 25px rgba(255,255,255,0.9), 0 0 45px rgba(194,24,91,0.8);
-      margin: 120px 0 3.5rem;
+      margin: 100px 0 3.5rem;
       max-width: 780px;
       line-height: 1.25;
       z-index: 2;
@@ -95,12 +81,7 @@
       transform: translateY(-5px) scale(1.05);
     }
 
-    section {
-      padding: 5rem 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
+    /* Правила и футер */
     .rules {
       background: rgba(0,0,0,0.75);
       padding: 4rem 2rem;
@@ -134,18 +115,14 @@
     }
 
     @media (max-width: 768px) {
-      .club-name { font-size: 3.2rem; top: 25px; }
       .logo-img { max-width: 220px; }
-      .tagline { font-size: 2.4rem; margin: 80px 0 2.5rem; }
+      .tagline { font-size: 2.4rem; margin: 70px 0 2.5rem; }
     }
   </style>
 </head>
 <body>
 
   <section class="hero">
-    <!-- Название клуба в самом верху -->
-    <div class="club-name">OMERZUNCHIK</div>
-
     <div class="logo-container">
       <img src="/logo.jpg" alt="Omerzunchik Logo" class="logo-img">
     </div>
