@@ -46,7 +46,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(10,0,5,0.7), rgba(15,0,5,0.85));
+      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.9));
       z-index: 1;
     }
 
@@ -90,33 +90,19 @@
       box-shadow: 0 0 50px rgba(194,24,91,0.9);
     }
 
-    section {
-      padding: 5rem 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 3rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--gold);
-      text-shadow: 0 0 15px rgba(184,134,11,0.5);
-    }
-
-    .main-photo {
+    /* Большая фотография на весь экран */
+    .full-photo {
       width: 100%;
-      max-width: 1000px;
-      margin: 0 auto 3rem;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 40px rgba(194,24,91,0.4);
+      margin: 0;
+      padding: 0;
     }
 
-    .main-photo img {
+    .full-photo img {
       width: 100%;
       height: auto;
       display: block;
+      max-height: 90vh;
+      object-fit: cover;
     }
 
     .slogan {
@@ -126,13 +112,19 @@
       color: var(--neon-magenta);
       text-shadow: 0 0 20px var(--neon-magenta), 0 0 40px var(--accent-red);
       text-align: center;
-      margin: 1.5rem 0 4rem;
+      margin: 2rem 0 4rem;
       animation: pulse 3s infinite ease-in-out;
     }
 
     @keyframes pulse {
       0%, 100% { opacity: 0.85; transform: scale(1); }
       50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .rules {
@@ -167,7 +159,6 @@
       .hero { min-height: 90vh; }
       .logo-img { max-width: 300px; }
       .slogan { font-size: 2rem; }
-      .main-photo { max-width: 100%; }
     }
   </style>
 </head>
@@ -183,13 +174,12 @@
     <a href="https://t.me/omerzunchik_private" class="cta" target="_blank">APPLY FOR MEMBERSHIP →</a>
   </section>
 
-  <section>
-    <div class="main-photo" style="width: 50%;">
-  <img src="/mainl.jpg" alt="Omerzunchik Interior" style="width: 100%;">
-</div>
-
-    <div class="slogan">Why are you gay</div>
+  <!-- Большая фотография на весь сайт -->
+  <section class="full-photo">
+    <img src="/main1.jpg" alt="Omerzunchik Club Interior">
   </section>
+
+  <div class="slogan">Why are you gay</div>
 
   <section class="rules">
     <h2>Rules</h2>
