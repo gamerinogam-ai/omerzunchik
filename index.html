@@ -53,7 +53,6 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 1rem;
     }
 
     /* Уменьшенная фотография main1.jpg */
@@ -65,12 +64,14 @@
 
     .main-photo img {
       width: 100%;
-      max-width: 1100px;     /* ← Уменьшил ширину примерно в 4 раза */
+      max-width: 550px;           /* ← Уменьшено в 2 раза по ширине */
       height: auto;
+      max-height: 380px;          /* ← Уменьшено по высоте */
       display: block;
       margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+      object-fit: cover;
     }
 
     .slogan {
@@ -79,7 +80,7 @@
       font-style: italic;
       color: #ff1493;
       text-align: center;
-      margin: 2rem 0 4rem;
+      margin: 2.5rem 0 4rem;
       text-shadow: 0 0 25px #ff1493;
       animation: pulse 3s infinite;
     }
@@ -101,6 +102,15 @@
       padding: 3rem 1rem;
       color: #aaa;
       font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .main-photo img {
+        max-width: 320px;
+        max-height: 250px;
+      }
+      .logo-img { max-width: 320px; }
+      .slogan { font-size: 2.1rem; }
     }
   </style>
 </head>
