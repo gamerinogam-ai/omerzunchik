@@ -29,6 +29,7 @@
       overflow-x: hidden;
     }
 
+    /* Hero — растянутая на весь экран */
     .hero {
       height: 100vh;
       min-height: 800px;
@@ -40,13 +41,14 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
+      width: 100%;
     }
 
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(10,0,5,0.7), rgba(15,0,5,0.85));
+      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.9));
       z-index: 1;
     }
 
@@ -62,15 +64,17 @@
       filter: drop-shadow(0 0 20px rgba(178,134,11,0.6));
     }
 
-    /* Обновлённая tagline */
+    /* Обновлённая надпись — белый цвет + UPPERCASE */
     .tagline {
-      font-size: 1.45rem;
-      font-weight: 700;                    /* Более жирный */
-      color: #c2185b;                      /* Бордовый цвет */
-      text-shadow: 0 0 12px rgba(194,24,91,0.6);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;                    /* Белый цвет */
+      text-transform: uppercase;         /* Прописные буквы */
+      text-shadow: 0 0 15px rgba(255,255,255,0.4);
       margin: 2rem 0 3rem;
-      max-width: 620px;
-      line-height: 1.45;
+      max-width: 700px;
+      line-height: 1.5;
+      letter-spacing: 1px;
     }
 
     .cta {
