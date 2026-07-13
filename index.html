@@ -55,7 +55,7 @@
       font-weight: bold;
     }
 
-    /* Уменьшенная фотография main1.jpg */
+    /* main1.jpg - ширина уменьшена в 2 раза, высота увеличена на 30% */
     .main-photo {
       width: 100%;
       text-align: center;
@@ -64,9 +64,9 @@
 
     .main-photo img {
       width: 100%;
-      max-width: 550px;           /* ← Уменьшено в 2 раза по ширине */
+      max-width: 550px;           /* ширина в 2 раза меньше */
       height: auto;
-      max-height: 380px;          /* ← Уменьшено по высоте */
+      max-height: 500px;          /* ← увеличено на 30% */
       display: block;
       margin: 0 auto;
       border-radius: 12px;
@@ -107,7 +107,7 @@
     @media (max-width: 768px) {
       .main-photo img {
         max-width: 320px;
-        max-height: 250px;
+        max-height: 320px;     /* увеличено на 30% для мобильных */
       }
       .logo-img { max-width: 320px; }
       .slogan { font-size: 2.1rem; }
