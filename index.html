@@ -17,11 +17,7 @@
       --text-light: #f5f0e1;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       background: var(--bg-dark);
@@ -29,11 +25,9 @@
       font-family: 'Segoe UI', system-ui, sans-serif;
     }
 
-    /* HERO — ФОН РАСТЯНУТ НА ВЕСЬ ЭКРАН */
     .hero {
       height: 100vh;
       min-height: 800px;
-      width: 100vw;                    /* Полная ширина экрана */
       background: url('/main.jpg') center/cover no-repeat;
       position: relative;
       display: flex;
@@ -42,9 +36,6 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
-      margin: 0;
-      left: 50%;
-      transform: translateX(-50%);     /* Центрируем по ширине */
     }
 
     .hero::before {
@@ -55,30 +46,33 @@
       z-index: 1;
     }
 
+    /* Логотип в верхнем левом углу */
     .logo-container {
-      position: relative;
-      z-index: 2;
-      max-width: 90%;
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 3;
     }
 
     .logo-img {
-      max-width: 400px;
+      max-width: 280px;
       height: auto;
       filter: drop-shadow(0 0 20px rgba(178,134,11,0.6));
     }
 
+    /* Большая и поднятая надпись */
     .tagline {
       font-family: 'Great Vibes', cursive;
-      font-size: 2.1rem;
+      font-size: 3.15rem;           /* +50% */
       font-weight: 400;
       color: #ffffff;
       text-shadow: 
         0 0 15px rgba(255,255,255,0.9),
-        0 0 25px rgba(194,24,91,0.7),
-        0 0 40px rgba(194,24,91,0.4);
-      margin: 2rem 0 3.5rem;
-      max-width: 720px;
-      line-height: 1.35;
+        0 0 30px rgba(194,24,91,0.8),
+        0 0 45px rgba(194,24,91,0.5);
+      margin: 80px 0 3rem;         /* Подняли выше */
+      max-width: 780px;
+      line-height: 1.25;
       z-index: 2;
     }
 
@@ -97,7 +91,6 @@
 
     .cta:hover {
       transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 0 50px rgba(194,24,91,0.9);
     }
 
     section {
@@ -140,9 +133,9 @@
     }
 
     @media (max-width: 768px) {
-      .hero { height: 90vh; }
-      .logo-img { max-width: 300px; }
-      .tagline { font-size: 1.7rem; }
+      .logo-container { top: 20px; left: 20px; }
+      .logo-img { max-width: 220px; }
+      .tagline { font-size: 2.4rem; margin: 60px 0 2rem; }
     }
   </style>
 </head>
@@ -152,7 +145,9 @@
     <div class="logo-container">
       <img src="/logo.jpg" alt="Omerzunchik Logo" class="logo-img">
     </div>
+    
     <p class="tagline">Private club for those who are not afraid of their desires<br>Invitation only • Full discretion • 21+</p>
+    
     <a href="https://t.me/omerzunchik_private" class="cta" target="_blank">APPLY FOR MEMBERSHIP →</a>
   </section>
 
