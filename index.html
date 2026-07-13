@@ -31,35 +31,37 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 2rem;
+      padding: 20px;
     }
 
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.92));
+      background: linear-gradient(to bottom, rgba(10,0,5,0.8), rgba(15,0,5,0.93));
     }
 
+    /* Логотип */
     .logo-container {
       position: absolute;
-      top: 40px;
-      left: 40px;
-      z-index: 3;
+      top: 25px;
+      left: 20px;
+      z-index: 5;
     }
 
     .logo-img {
-      max-width: 280px;
+      max-width: 190px;
       height: auto;
     }
 
+    /* Основная надпись */
     .tagline {
       font-family: 'Great Vibes', cursive;
-      font-size: 3.15rem;
+      font-size: 2.75rem;
       color: #ffffff;
-      text-shadow: 0 0 25px rgba(255,255,255,0.9), 0 0 45px rgba(194,24,91,0.8);
-      margin: 100px 0 3.5rem;
-      max-width: 780px;
+      text-shadow: 0 0 25px rgba(255,255,255,0.9), 0 0 40px rgba(194,24,91,0.8);
+      margin: 140px 0 3rem;        /* большой отступ */
+      max-width: 90%;
       line-height: 1.25;
       z-index: 2;
     }
@@ -67,29 +69,24 @@
     .cta {
       background: linear-gradient(135deg, var(--accent-red), #8b0000);
       color: white;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: bold;
-      padding: 1.3rem 3.5rem;
+      padding: 1.2rem 3rem;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 0 35px rgba(194,24,91,0.7);
-      transition: all 0.3s;
+      box-shadow: 0 0 30px rgba(194,24,91,0.7);
       z-index: 2;
-    }
-
-    .cta:hover {
-      transform: translateY(-5px) scale(1.05);
     }
 
     /* Правила и футер */
     .rules {
       background: rgba(0,0,0,0.75);
-      padding: 4rem 2rem;
+      padding: 4rem 1.5rem;
       text-align: center;
     }
 
     .rules h2 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: var(--accent-red);
       margin-bottom: 2rem;
     }
@@ -98,12 +95,8 @@
       list-style: none;
       max-width: 700px;
       margin: 0 auto;
-      font-size: 1.35rem;
-      line-height: 2.2;
-    }
-
-    .rules li strong {
-      color: var(--neon-magenta);
+      font-size: 1.3rem;
+      line-height: 2.1;
     }
 
     footer {
@@ -114,9 +107,26 @@
       font-size: 0.95rem;
     }
 
+    /* ==================== MOBILE ==================== */
     @media (max-width: 768px) {
-      .logo-img { max-width: 220px; }
-      .tagline { font-size: 2.4rem; margin: 70px 0 2.5rem; }
+      .logo-container {
+        top: 20px;
+        left: 20px;
+      }
+      .logo-img {
+        max-width: 160px;           /* уменьшили логотип */
+      }
+      .tagline {
+        font-size: 2.05rem;
+        margin: 125px 0 2.5rem;     /* сильно отодвинули вниз */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tagline {
+        font-size: 1.85rem;
+        margin: 115px 0 2rem;
+      }
     }
   </style>
 </head>
