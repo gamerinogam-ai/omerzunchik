@@ -4,29 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Omerzunchik • Private Club</title>
-  <meta name="description" content="Private club for those who are not afraid of their desires. Invitation only. 21+"/>
   <style>
-    :root {
-      --bg-dark: #0a0005;
-      --accent-red: #c2185b;
-      --neon-magenta: #ff1493;
-      --gold: #b8860b;
-      --text-light: #f5f0e1;
-      --text-muted: #d0c0b0;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      background: var(--bg-dark);
-      color: var(--text-light);
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0a0005;
+      color: #f5f0e1;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    /* Hero */
     .hero {
       height: 100vh;
-      min-height: 800px;
       background: url('/main.jpg') center/cover no-repeat;
       position: relative;
       display: flex;
@@ -41,64 +29,63 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(10,0,5,0.75), rgba(15,0,5,0.9));
-      z-index: 1;
+      background: linear-gradient(to bottom, rgba(10,0,5,0.8), rgba(15,0,5,0.95));
     }
 
-    .logo-container { position: relative; z-index: 2; }
     .logo-img {
-      max-width: 420px;
+      max-width: 400px;
       height: auto;
-      filter: drop-shadow(0 0 25px rgba(184,134,11,0.7));
+      z-index: 2;
+      filter: drop-shadow(0 0 20px #b8860b);
     }
 
     .tagline {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-style: italic;
-      color: var(--text-muted);
       margin: 2rem 0 3rem;
-      max-width: 620px;
-      line-height: 1.4;
+      z-index: 2;
     }
 
     .cta {
-      background: linear-gradient(135deg, var(--accent-red), #8b0000);
+      background: linear-gradient(#c2185b, #8b0000);
       color: white;
-      font-size: 1.35rem;
-      font-weight: bold;
-      padding: 1.1rem 3rem;
+      padding: 1rem 3rem;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 0 30px rgba(194,24,91,0.6);
-      transition: all 0.3s;
-    }
-
-    .cta:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 50px rgba(194,24,91,0.9);
-    }
-
-    /* Большая фотография main1.jpg — исправленный размер */
-    .main-photo {
-      width: 100%;
-      margin: 0;
+      font-weight: bold;
+      z-index: 2;
     }
 
     .main-photo img {
       width: 100%;
       height: auto;
-      max-height: 75vh;           /* ← Главное ограничение высоты */
+      max-height: 70vh;
       display: block;
-      object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     }
 
     .slogan {
-      font-size: 2.6rem;
-      font-weight: 900;
+      font-size: 2.5rem;
       font-style: italic;
-      color: var(--neon-magenta);
-      text-shadow: 0 0 25px var(--neon-magenta), 0 0 45px #c2185b;
+      color: #ff1493;
       text-align: center;
-      margin: 2.5rem 0 4rem;
-      animation: pulse 3s infinite ease-in-out;
+      margin: 2rem 0 4rem;
+      text-shadow: 0 0 20px #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="/logo.jpg" alt="Omerzunchik" class="logo-img">
+    <p class="tagline">Private club for those who are not afraid of their desires<br>Invitation only • Full discretion • 21+</p>
+    <a href="https://t.me/omerzunchik_private" class="cta" target="_blank">APPLY FOR MEMBERSHIP →</a>
+  </section>
+
+  <section class="main-photo">
+    <img src="/main1.jpg" alt="Omerzunchik Interior">
+  </section>
+
+  <div class="slogan">Why are you gay</div>
+
+</body>
+</html>
